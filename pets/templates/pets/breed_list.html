@@ -2,7 +2,8 @@
 {% block content %}
 <h1>Breeds</h1>
 {% for breed in object_list %}
-{% if breed.picture %}
+{% if not breed.parent %}
+<h3><a href="{{breed.id}}">{{breed.name}}</a></h3>
 {% endif %}
 {% endfor %}
 {% endblock content %}
