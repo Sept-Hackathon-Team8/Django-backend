@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "accounts",
     "pages",
     "books",
+    "pets",
 ]
 
 MIDDLEWARE = [
