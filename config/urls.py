@@ -3,7 +3,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
+    # API
+    path("", include("accounts.urls")),
+    path("api/", include("api.urls")),
     # Django admin
     path("anything-but-admin/", admin.site.urls),  # new
     # User management
@@ -12,7 +16,7 @@ urlpatterns = [
     path("", include("pages.urls")),
     # Local apps
     path("breeds/", include("pets.urls")),
-    path('books/', include('books.urls')),
+    path("books/", include("books.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
