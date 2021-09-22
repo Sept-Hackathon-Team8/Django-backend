@@ -11,13 +11,14 @@ services:
     depends_on:
       - db
     environment:
-      - "DJANGO_SECRET_KEY=ldBHq0YGYxBzaMJnLVOiNG7hruE8WKzGG2zGpYxoTNmphB0mdBo"
+      - 'DJANGO_SECRET_KEY=2qcLXAjL5rZVUFq5qMxdS5urcMdPR6-z-qAm-qfKKs67QJjtrrc'
+      - 'DJANGO_DEBUG=False'
   db:
     image: postgres:11
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
 
 volumes:
   postgres_data:
