@@ -5,6 +5,8 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    # Pages
+    path("", include("pages.urls")),
     # API
     path("", include("accounts.urls")),
     path("api/", include("api.urls")),
@@ -12,8 +14,6 @@ urlpatterns = [
     path("anything-but-admin/", admin.site.urls),  # new
     # User management
     path("accounts/", include("allauth.urls")),
-    # Pages
-    path("", include("pages.urls")),
     # Local apps
     path("breeds/", include("pets.urls")),
     path("books/", include("books.urls")),
