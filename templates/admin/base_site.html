@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}DOGGO ADMIN{% endblock %}
+
+{% block branding %}
+<div style="text-align:center">
+  <style>
+    #header,
+    #header h1 a,
+    #branding h1 a:link {
+      background: #F9C946;
+      color: black;
+      overflow: hidden;
+    }
+
+    div.breadcrumbs {
+      background: black;
+    }
+
+    .module caption {
+      background: #F9C946;
+      color: black;
+    }
+  </style>
+  <img src="{% static 'images/doggo.svg' %}" alt="">
+  <h1 id="site-name"><a href="{% url 'admin:index' %}" style="color:black">DOGGO ADMIN</a></h1>
+</div>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

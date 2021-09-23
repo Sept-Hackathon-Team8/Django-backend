@@ -2,6 +2,10 @@ import uuid
 from django.db import models
 from django.db.models.deletion import CASCADE
 from accounts.models import CustomUser
+from datetime import datetime, timedelta
+
+from units.models import Task
+
 
 # Create your models here.
 
@@ -20,16 +24,44 @@ class Pet(models.Model):
     name = models.CharField(max_length=200)
     age = models.IntegerField(default=0)
     owner = models.ForeignKey(CustomUser, related_name="pets", on_delete=CASCADE)
-    breed = models.ForeignKey(Breed, related_name="streak", on_delete=CASCADE)
+    breed = models.ForeignKey(Breed, related_name="breeds", on_delete=CASCADE)
 
     def __str__(self):
         return self.name
 
 
 class Streak(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    streakvalue = models.IntegerField("streak count", default=0)
-    pet = models.OneToOneField(Pet, related_name="streak", on_delete=CASCADE)
+    streak_value = models.IntegerField(default=0)
+    pet = models.ForeignKey(Pet, related_name="streak", on_delete=CASCADE)
+
+    def is_streak(self):
+        hours_to_end_of_day = timedelta(hours=25 - datetime.now().hour)
+        day_delta = timedelta(days=1)
+        return datetime.now() < self.updated_at + day_delta + hours_to_end_of_day
 
     def __str__(self):
-        return f"{self.pet.name} streak: {self.streakvalue}"
+        return f"{self.pet.name} - streak: {self.streak_value}"
+
+
+class Journey(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    pet = models.OneToOneField(Pet, related_name="journey_pet", on_delete=CASCADE)
+    current_unit = models.IntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.pet} journey"
+
+
+class Assesment(models.Model):
+    # SORT BY DATE IN THE VIEW SERIALIZER
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    success = models.BooleanField(default=False)
+    task = models.ForeignKey(Task, related_name="assesment", on_delete=CASCADE)
+    pet = models.OneToOneField(Pet, related_name="journey", on_delete=CASCADE)
+
+    def __str__(self):
+        type = "great" if self.success else "ruff"
+        return f"Assesment - Unit: {self.task.unit.order} - {self.task.title} - {type}"
