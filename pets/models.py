@@ -18,6 +18,7 @@ class Breed(models.Model):
 
 class Pet(models.Model):
     name = models.CharField(max_length=200)
+    age = models.IntegerField(default=0)
     owner = models.ForeignKey(CustomUser, related_name="pets", on_delete=CASCADE)
     breed = models.ForeignKey(Breed, related_name="streak", on_delete=CASCADE)
 

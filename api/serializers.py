@@ -22,7 +22,7 @@ class PetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pet
-        fields = ("id", "name", "owner", "breed")
+        fields = ("id", "name", "owner", "breed", "age")
 
 
 class StreakSerializer(serializers.ModelSerializer):
