@@ -217,3 +217,8 @@ CORS_ORIGIN_WHITELIST = (
     "http://localhost:8000",
     "https://pet-hackathon.herokuapp.com",
 )
+
+REST_AUTH_SERIALIZERS = {
+    # 'LOGIN_SERIALIZER': 'path.to.custom.LoginSerializer',
+    "TOKEN_SERIALIZER": "accounts.serializers.TokenSerializer",
+}
