@@ -17,3 +17,12 @@ class Breed(models.Model):
 
     def __str__(self):
         return self.name
+
+class Streak(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    streakvalue = models.IntegerField("streakvalue", max_length=200)
+    pet = models.OneToOneField(Pet, related_name="pet")
+
+
+    def __str__(self):
+        return self.name
