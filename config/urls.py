@@ -11,7 +11,7 @@ urlpatterns = [
     path("", include("accounts.urls")),
     path("api/", include("api.urls")),
     # Django admin
-    path("anything-but-admin/", admin.site.urls),  # new
+    path("anything-but-admin/", admin.site.urls),
     # User management
     path("accounts/", include("allauth.urls")),
     # Local apps
