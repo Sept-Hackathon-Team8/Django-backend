@@ -1,12 +1,9 @@
 import uuid
 from django.db import models
 from django.db.models.deletion import CASCADE
+from accounts.models import CustomUser
 
 # Create your models here.
-
-
-class Pet(models.Model):
-    pass
 
 
 class Breed(models.Model):
@@ -19,10 +16,19 @@ class Breed(models.Model):
         return self.name
 
 
-class Streak(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    streakvalue = models.IntegerField("streak", default=0)
-    pet = models.OneToOneField(Pet, related_name="pet", on_delete=CASCADE)
+class Pet(models.Model):
+    name = models.CharField(max_length=200)
+    owner = models.ForeignKey(CustomUser, related_name="pets", on_delete=CASCADE)
+    breed = models.ForeignKey(Breed, related_name="streak", on_delete=CASCADE)
 
     def __str__(self):
         return self.name
+
+
+class Streak(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    streakvalue = models.IntegerField("streak count", default=0)
+    pet = models.OneToOneField(Pet, related_name="streak", on_delete=CASCADE)
+
+    def __str__(self):
+        return f"{self.pet.name} streak: {self.streakvalue}"
