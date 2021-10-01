@@ -48,8 +48,8 @@ class Streak(models.Model):
 
 class Journey(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    pet = models.OneToOneField(Pet, related_name="journey_pet", on_delete=CASCADE)
-    current_unit = models.IntegerField(default=1)
+    pet = models.OneToOneField(Pet, related_name="journey", on_delete=CASCADE)
+    unit = models.IntegerField(default=1)
 
     def __str__(self):
         return f"{self.pet} journey"
@@ -59,8 +59,8 @@ class Assesment(models.Model):
     # SORT BY DATE IN THE VIEW SERIALIZER
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     success = models.BooleanField(default=False)
-    task = models.ForeignKey(Task, related_name="assesment", on_delete=CASCADE)
-    pet = models.OneToOneField(Pet, related_name="journey", on_delete=CASCADE)
+    task = models.ForeignKey(Task, related_name="task", on_delete=CASCADE)
+    pet = models.OneToOneField(Pet, related_name="pet", on_delete=CASCADE)
 
     def __str__(self):
         type = "great" if self.success else "ruff"

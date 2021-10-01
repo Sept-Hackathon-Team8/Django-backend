@@ -18,7 +18,6 @@ class DetailBreed(generics.RetrieveAPIView):
 class ListPet(generics.ListCreateAPIView):
     def get_queryset(self):
         user = self.request.user
-        print("THIS IS USER", self.request.user)
         return Pet.objects.filter(owner=user)
 
     serializer_class = PetSerializer
