@@ -1,6 +1,6 @@
 from rest_framework import generics
-from pets.models import Breed, Pet, Streak
-from .serializers import BreedSerializer, PetSerializer, StreakSerializer
+from pets.models import Breed, Journey, Pet, Streak
+from .serializers import BreedSerializer, JourneySerializer, PetSerializer, StreakSerializer
 from .permissions import IsAuthorOrReadOnly
 
 
@@ -30,3 +30,7 @@ class ListStreak(generics.ListCreateAPIView):
 
     queryset = Streak.objects.all()
     serializer_class = StreakSerializer
+
+class UpdateJourney(generics.RetrieveUpdateAPIView):
+    queryset = Journey.objects.all()
+    serializer_class = JourneySerializer
