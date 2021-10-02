@@ -1,0 +1,82 @@
+[
+  {
+    "model": "units.tip",
+    "pk": 1,
+    "fields": {
+      "success": false,
+      "title": "Timing",
+      "text": "If you take too long to deliver the treat, your dog can become confused about what exactly he’s being rewarded for.\r\nUsing a “marker” — like a whistle or a clicker — when you train can give you incredible precision with your timing.",
+      "task": "6144f2ff-b069-42e9-a039-a6c68c0f185a"
+    }
+  },
+  {
+    "model": "units.tip",
+    "pk": 2,
+    "fields": {
+      "success": false,
+      "title": "Add Distance and Increase Value",
+      "text": "If your dog doesn’t sit when asked because they are too distracted, simply add distance between you and the distraction before trying again.\r\nYour other option is to increase the value of the treat reward or consider using toys and play as a reward.",
+      "task": "8bcb4076-c75b-4e3f-b9a0-9c27362dd5cb"
+    }
+  },
+  {
+    "model": "units.tip",
+    "pk": 3,
+    "fields": {
+      "success": false,
+      "title": "Rate of Reinforcement",
+      "text": "A place can provide rewards like smells, other dogs, or another person.\r\nThat means the rewards you offer are in competition with the place.\r\n Until your dog works around distractions, your rate of reinforcement should be frequent  to keep you and the training session exciting.\r\n If not, the wrong behavior can be reinforced.",
+      "task": "1ead2f05-8448-48f2-af9f-5fbbed62e349"
+    }
+  },
+  {
+    "model": "units.tip",
+    "pk": 4,
+    "fields": {
+      "success": false,
+      "title": "Rewards From A Dog’s Point  of View",
+      "text": "Make sure you choose something truly rewarding from your dog’s point of view. Rewards can even be praise, a toy, or a chance to play a game — anything your dog loves makes a great reinforcement.\r\nIf your dog dislikes something, it will decrease his desire to repeat a behavior.",
+      "task": "18ab882f-7890-424e-8d96-82635630abf4"
+    }
+  },
+  {
+    "model": "units.tip",
+    "pk": 5,
+    "fields": {
+      "success": true,
+      "title": "Success 1.0",
+      "text": "What a good doggo! Here's a treat for him!",
+      "task": "1ead2f05-8448-48f2-af9f-5fbbed62e349"
+    }
+  },
+  {
+    "model": "units.tip",
+    "pk": 6,
+    "fields": {
+      "success": true,
+      "title": "Success 2.0",
+      "text": "What a good doggo! Here's a treat!",
+      "task": "18ab882f-7890-424e-8d96-82635630abf4"
+    }
+  },
+  {
+    "model": "units.tip",
+    "pk": 7,
+    "fields": {
+      "success": true,
+      "title": "Success 3.0",
+      "text": "What a good doggo! Here's a treat!",
+      "task": "6144f2ff-b069-42e9-a039-a6c68c0f185a"
+    }
+  },
+  {
+    "model": "units.tip",
+    "pk": 8,
+    "fields": {
+      "success": true,
+      "title": "Success 4.0",
+      "text": "What a good doggo! Here's a treat!",
+      "task": "8bcb4076-c75b-4e3f-b9a0-9c27362dd5cb"
+    }
+  }
+]

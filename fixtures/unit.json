@@ -1,0 +1,26 @@
+[
+  {
+    "model": "units.unit",
+    "pk": "60026e37-c108-4346-bae9-c11d95511b6e",
+    "fields": {
+      "title": "Unit Two",
+      "order": 2
+    }
+  },
+  {
+    "model": "units.unit",
+    "pk": "72653094-3a0a-42d6-84e1-894e43faef02",
+    "fields": {
+      "title": "Unit Six",
+      "order": 6
+    }
+  },
+  {
+    "model": "units.unit",
+    "pk": "b24e2ff3-fba7-44e5-9871-592c7b461eb4",
+    "fields": {
+      "title": "Unit One",
+      "order": 1
+    }
+  }
+]

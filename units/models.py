@@ -6,6 +6,9 @@ from datetime import datetime, timedelta
 
 
 class Unit(models.Model):
+    # class Meta:
+    #     ordering = ["order", "task.order"]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
     order = models.IntegerField(default=0)
@@ -15,6 +18,9 @@ class Unit(models.Model):
 
 
 class Task(models.Model):
+    class Meta:
+        ordering = ["unit__order", "order"]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
     instructions = models.TextField(max_length=1000)
