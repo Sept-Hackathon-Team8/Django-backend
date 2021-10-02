@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import ListBreed, DetailBreed, ListPet, UpdateJourney
+from .views import ListBreed, DetailBreed, ListPet, ListTasks, UpdateJourney, ListUnits
 
 urlpatterns = [
     # Third Party
@@ -10,4 +10,6 @@ urlpatterns = [
     path("breeds/<uuid:pk>", DetailBreed.as_view()),
     path("pets/", ListPet.as_view()),
     path("journey/<uuid:pk>", UpdateJourney.as_view()),
+    path("units/", ListUnits.as_view()),
+    path("units/tasks/", ListTasks.as_view()),
 ]

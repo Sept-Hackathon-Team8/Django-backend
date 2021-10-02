@@ -3,6 +3,7 @@ from inspect import currentframe
 from django.db.models.query_utils import select_related_descend
 from rest_framework import serializers
 from pets.models import Pet, Breed, Streak, Journey
+from units.models import Unit, Task, Tip
 
 
 class SubBreedSerializer(serializers.ModelSerializer):
@@ -40,3 +41,25 @@ class StreakSerializer(serializers.ModelSerializer):
     class Meta:
         model = Streak
         fields = ("streakvalue", "pet")
+
+
+class TipSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tip
+        fields = ("id", "title", "text", "success")
+
+
+class TaskSerializer(serializers.ModelSerializer):
+    tip = TipSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Task
+        fields = ("id", "title", "instructions", "icon", "image", "order", "tip")
+
+
+class UnitSerializer(serializers.ModelSerializer):
+    tasks = TaskSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Unit
+        fields = ("id", "title", "order", "tasks")

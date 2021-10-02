@@ -6,8 +6,8 @@ from datetime import datetime, timedelta
 
 
 class Unit(models.Model):
-    # class Meta:
-    #     ordering = ["order", "task.order"]
+    class Meta:
+        ordering = ["order"]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
@@ -24,10 +24,10 @@ class Task(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
     instructions = models.TextField(max_length=1000)
-    icon_url = models.URLField("task icon", blank=True)
-    img_url = models.URLField("task image", blank=True)
+    icon = models.URLField("task icon", blank=True)
+    image = models.URLField("task image", blank=True)
     order = models.IntegerField(default=0)
-    unit = models.ForeignKey(Unit, related_name="task", on_delete=CASCADE)
+    unit = models.ForeignKey(Unit, related_name="tasks", on_delete=CASCADE)
 
     def __str__(self):
         return f"{self.unit} task: {self.title}"
