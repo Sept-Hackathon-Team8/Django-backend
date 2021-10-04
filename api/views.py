@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 from pets.models import Breed, Journey, Pet, Streak
 from units.models import Task, Unit
 from .serializers import (
@@ -46,6 +46,7 @@ class UpdateJourney(generics.RetrieveUpdateAPIView):
 
 
 class ListUnits(generics.ListAPIView):
+    permission_classes = [permissions.AllowAny]
     queryset = Unit.objects.all()
     serializer_class = UnitSerializer
 
