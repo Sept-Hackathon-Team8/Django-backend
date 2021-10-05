@@ -1,10 +1,14 @@
-from rest_framework import generics, permissions
-from pets.models import Breed, Journey, Pet, Streak
+from rest_framework import generics, permissions, views, response
+from django.db.models import Q
+from django.shortcuts import get_object_or_404
+import json
+from pets.models import Breed, Journey, Pet, Streak, Assesment
 from units.models import Task, Unit
 from .serializers import (
     BreedSerializer,
     JourneySerializer,
     PetSerializer,
+    AssesmentSerializer,
     StreakSerializer,
     TaskSerializer,
     UnitSerializer,
@@ -52,5 +56,61 @@ class ListUnits(generics.ListAPIView):
 
 
 class ListTasks(generics.ListAPIView):
+    permission_classes = [permissions.AllowAny]
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+
+
+def createAssessmentTree(data):
+    AssessmentTree = {}
+
+
+class ListPetAssesments(views.APIView):
+    def post(self, request):
+        request_body = json.loads(request.body)
+        pet_pk = request_body["pet"]
+        qs = Assesment.objects.filter(pet__id=pet_pk)
+        data = AssesmentSerializer(qs, many=True, context={"request": request}).data
+        if data:
+            qs = Unit.objects.all()
+            units = UnitSerializer(qs, many=True, context={"request": request}).data
+            # print([task["title"] for unit in units for task in unit["tasks"]])
+            assessmentTree = [
+                [{"ruff": 0, "great": 0} for task in tasks]
+                for tasks in [unit["tasks"] for unit in units]
+            ]
+            for assessment in data:
+                assessmentItem = assessmentTree[assessment["unit"] - 1][
+                    assessment["task"] - 1
+                ]
+                if assessment["success"]:
+                    assessmentItem["great"] += 1
+                else:
+                    assessmentItem["ruff"] += 1
+
+            return response.Response(
+                {"message": "success", "data": assessmentTree}, status=200
+            )
+        return response.Response(
+            {"message": "no data available", "success": False}, status=404
+        )
+
+
+# class ProductViewSet(APIView):
+#     def get(self, request):
+#         _id   = self.request.GET.get('id', None).split(',')
+#         ean   = self.request.GET.get('ean', None).split(',')
+
+#         qs = Product.objects.filter(Q(id__in=_id) | Q(ean__in=ean))
+#         data = serializers.ProductSerializer(qs, many=True, context={'request': request}).data
+
+#         if data:
+#                 return Response({
+#                         'message': 'success',
+#                         "data":data,
+#                     },status=200)
+#             else:
+#                 return Response({
+#                         'message':'no data available',
+#                         'success':'False'
+#                     },status=200)

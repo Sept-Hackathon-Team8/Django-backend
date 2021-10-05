@@ -2,7 +2,7 @@
 from inspect import currentframe
 from django.db.models.query_utils import select_related_descend
 from rest_framework import serializers
-from pets.models import Pet, Breed, Streak, Journey
+from pets.models import Pet, Breed, Streak, Journey, Assesment
 from units.models import Unit, Task, Tip
 
 
@@ -63,3 +63,12 @@ class UnitSerializer(serializers.ModelSerializer):
     class Meta:
         model = Unit
         fields = ("id", "title", "order", "tasks")
+
+
+class AssesmentSerializer(serializers.ModelSerializer):
+    task = serializers.IntegerField(source="task.order")
+    unit = serializers.IntegerField(source="task.unit.order")
+
+    class Meta:
+        model = Assesment
+        fields = ("success", "task", "unit")
