@@ -74,14 +74,14 @@ class ListPetAssesments(views.APIView):
         pet_pk = request_body["pet"]
         qs = Assesment.objects.filter(pet__id=pet_pk)
         data = AssesmentListSerializer(qs, many=True, context={"request": request}).data
+        qs = Unit.objects.all()
+        units = UnitSerializer(qs, many=True, context={"request": request}).data
+        assessmentTree = [
+            [{"ruff": 0, "great": 0} for task in tasks]
+            for tasks in [unit["tasks"] for unit in units]
+        ]
         if data:
-            qs = Unit.objects.all()
-            units = UnitSerializer(qs, many=True, context={"request": request}).data
             # print([task["title"] for unit in units for task in unit["tasks"]])
-            assessmentTree = [
-                [{"ruff": 0, "great": 0} for task in tasks]
-                for tasks in [unit["tasks"] for unit in units]
-            ]
             for assessment in data:
                 assessmentItem = assessmentTree[assessment["unit"] - 1][
                     assessment["task"] - 1
@@ -95,5 +95,8 @@ class ListPetAssesments(views.APIView):
                 {"message": "success", "data": assessmentTree}, status=200
             )
         return response.Response(
-            {"message": "no data available", "success": False}, status=404
+            # TODO: Right now a 404 is not being handle add it by separating the data from the status
+            # TODO: [continue] when making the request to AssesmentListSerializer
+            {"message": "no data available", "data": assessmentTree},
+            status=200,
         )
