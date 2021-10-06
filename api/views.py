@@ -18,6 +18,7 @@ from .permissions import IsAuthorOrReadOnly
 
 
 class ListBreed(generics.ListCreateAPIView):
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Breed.objects.all()
     serializer_class = BreedSerializer
 
@@ -51,7 +52,7 @@ class UpdateJourney(generics.RetrieveUpdateAPIView):
 
 
 class ListUnits(generics.ListAPIView):
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Unit.objects.all()
     serializer_class = UnitSerializer
 
