@@ -65,10 +65,16 @@ class UnitSerializer(serializers.ModelSerializer):
         fields = ("id", "title", "order", "tasks")
 
 
-class AssesmentSerializer(serializers.ModelSerializer):
+class AssesmentListSerializer(serializers.ModelSerializer):
     task = serializers.IntegerField(source="task.order")
     unit = serializers.IntegerField(source="task.unit.order")
 
     class Meta:
         model = Assesment
         fields = ("success", "task", "unit")
+
+
+class AssesmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Assesment
+        fields = ("created_at", "id", "success", "task", "pet")

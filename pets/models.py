@@ -57,10 +57,11 @@ class Journey(models.Model):
 
 class Assesment(models.Model):
     # SORT BY DATE IN THE VIEW SERIALIZER
+    created_at = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     success = models.BooleanField(default=False)
     task = models.ForeignKey(Task, related_name="task", on_delete=CASCADE)
-    pet = models.OneToOneField(Pet, related_name="pet", on_delete=CASCADE)
+    pet = models.ForeignKey(Pet, related_name="pet", on_delete=CASCADE)
 
     def __str__(self):
         type = "great" if self.success else "ruff"

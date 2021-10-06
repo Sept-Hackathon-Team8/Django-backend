@@ -7,6 +7,7 @@ from .views import (
     UpdateJourney,
     ListUnits,
     ListPetAssesments,
+    ListAssessments,
 )
 
 urlpatterns = [
@@ -20,5 +21,6 @@ urlpatterns = [
     path("journey/<uuid:pk>", UpdateJourney.as_view()),
     path("units/", ListUnits.as_view()),
     path("units/tasks/", ListTasks.as_view()),
+    path("assessments/", ListAssessments.as_view()),
     path("pet/assessments/", ListPetAssesments.as_view()),
 ]
