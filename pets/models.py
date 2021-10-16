@@ -37,10 +37,20 @@ class Streak(models.Model):
     streak_value = models.IntegerField(default=0)
     pet = models.ForeignKey(Pet, related_name="streak", on_delete=CASCADE)
 
+    class Meta:
+        ordering = ["-created_at"]
+
     def is_streak(self):
-        hours_to_end_of_day = timedelta(hours=25 - datetime.now().hour)
+        now = datetime.now(self.updated_at.tzinfo)
+        hours_to_end_of_day = timedelta(hours=25 - now.hour)
         day_delta = timedelta(days=1)
-        return datetime.now() < self.updated_at + day_delta + hours_to_end_of_day
+        return now < self.updated_at + day_delta + hours_to_end_of_day
+
+    def calc_streak(self):
+        if self.is_streak():
+            self.streak_value = (
+                datetime.now(self.created_at.tzinfo) - self.created_at
+            ).days
 
     def __str__(self):
         return f"{self.pet.name} - streak: {self.streak_value}"
