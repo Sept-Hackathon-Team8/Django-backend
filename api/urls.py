@@ -8,6 +8,8 @@ from .views import (
     ListUnits,
     ListPetAssesments,
     ListAssessments,
+    ListStreak,
+    GetPetStreak,
 )
 
 urlpatterns = [
@@ -22,5 +24,9 @@ urlpatterns = [
     path("units/", ListUnits.as_view()),
     path("units/tasks/", ListTasks.as_view()),
     path("assessments/", ListAssessments.as_view()),
+    # TODO: modify routes below to conform with REST API resorce naming guide
+    # TODO: and subsequently modify said calls in react
     path("pet/assessments/", ListPetAssesments.as_view()),
+    path("streaks/", ListStreak.as_view()),
+    path("pet/get-streak", GetPetStreak.as_view()),
 ]

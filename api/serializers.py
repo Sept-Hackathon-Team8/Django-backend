@@ -40,7 +40,7 @@ class PetSerializer(serializers.ModelSerializer):
 class StreakSerializer(serializers.ModelSerializer):
     class Meta:
         model = Streak
-        fields = ("streakvalue", "pet")
+        fields = ("streak_value", "pet", "updated_at", "created_at")
 
 
 class TipSerializer(serializers.ModelSerializer):

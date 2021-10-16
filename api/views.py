@@ -101,3 +101,29 @@ class ListPetAssesments(views.APIView):
             {"message": "no data available", "data": assessmentTree},
             status=200,
         )
+
+
+class GetPetStreak(views.APIView):
+    def post(self, request):
+        request_body = json.loads(request.body)
+        pet_pk = request_body["pet"]
+        qs = Streak.objects.filter(pet__id=pet_pk)
+        if not qs and not qs[0].is_streak():
+            pet = Pet.objects.filter(pk=pet_pk)[0]
+            qs = Streak.objects.create(pet__id=pet_pk)
+        # streaks are ordered by created date in descending order
+        streak = qs[0]
+        streak.calc_streak()
+        # recreate the query filtering by streak id
+        qs = Streak.objects.filter(pk=streak.pk)
+        return response.Response(
+            # TODO: Right now we're not handling what happens if the API
+            # TODO: is called with an invalid pet pk.
+            {
+                "message": "success",
+                "data": StreakSerializer(
+                    qs, many=True, context={"request": request}
+                ).data[0],
+            },
+            status=200,
+        )
