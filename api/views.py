@@ -108,10 +108,10 @@ class GetPetStreak(views.APIView):
         request_body = json.loads(request.body)
         pet_pk = request_body["pet"]
         qs = Streak.objects.filter(pet__id=pet_pk)
-        if not qs and not qs[0].is_streak():
-            pet = Pet.objects.filter(pk=pet_pk)[0]
-            qs = Streak.objects.create(pet__id=pet_pk)
-        # streaks are ordered by created date in descending order
+        pet = Pet.objects.get(id=pet_pk)
+        if not qs or (qs and not qs[0].is_streak()):
+            streak = Streak.objects.create(pet=pet)
+            # streaks are ordered by created date in descending order
         streak = qs[0]
         streak.calc_streak()
         # recreate the query filtering by streak id
@@ -119,11 +119,5 @@ class GetPetStreak(views.APIView):
         return response.Response(
             # TODO: Right now we're not handling what happens if the API
             # TODO: is called with an invalid pet pk.
-            {
-                "message": "success",
-                "data": StreakSerializer(
-                    qs, many=True, context={"request": request}
-                ).data[0],
-            },
-            status=200,
+            StreakSerializer(qs, many=True, context={"request": request}).data[0],
         )
