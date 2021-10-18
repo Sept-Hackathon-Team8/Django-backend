@@ -112,7 +112,8 @@ class GetPetStreak(views.APIView):
         if not qs or (qs and not qs[0].is_streak()):
             streak = Streak.objects.create(pet=pet)
             # streaks are ordered by created date in descending order
-        streak = qs[0]
+        else:
+            streak = qs[0]
         streak.calc_streak()
         # recreate the query filtering by streak id
         qs = Streak.objects.filter(pk=streak.pk)
