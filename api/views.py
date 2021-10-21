@@ -107,14 +107,27 @@ class GetPetStreak(views.APIView):
     def post(self, request):
         request_body = json.loads(request.body)
         pet_pk = request_body["pet"]
-        qs = Streak.objects.filter(pet__id=pet_pk)
+        # In order to make sure the body of the json hasn't been tampered
+        # add user in the get method to make sure pet belongs to user
         pet = Pet.objects.get(id=pet_pk)
+        # if pet doesn't exist return drf raise json 404
+        qs = Streak.objects.filter(pet__id=pet_pk)
+
+        # move is_streak object inside model can change to getorcreate
+
         if not qs or (qs and not qs[0].is_streak()):
             streak = Streak.objects.create(pet=pet)
             # streaks are ordered by created date in descending order
         else:
             streak = qs[0]
-        streak.calc_streak()
+
+        try:
+            calc = request_body["calculate"]
+            if calc:
+                print("THE CALCULATION IS BEING DONE")
+                streak.calc_streak()
+        except KeyError:
+            pass
         # recreate the query filtering by streak id
         qs = Streak.objects.filter(pk=streak.pk)
         return response.Response(

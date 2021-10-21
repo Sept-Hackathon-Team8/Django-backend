@@ -48,9 +48,9 @@ class Streak(models.Model):
 
     def calc_streak(self):
         if self.is_streak():
-            self.streak_value = (
-                datetime.now(self.created_at.tzinfo) - self.created_at
-            ).days
+            streak_val = (datetime.now(self.created_at.tzinfo) - self.created_at).days
+            self.streak_value = streak_val
+            self.save()
 
     def __str__(self):
         return f"{self.pet.name} - streak: {self.streak_value}"
