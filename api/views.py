@@ -82,7 +82,6 @@ class ListPetAssesments(views.APIView):
             for tasks in [unit["tasks"] for unit in units]
         ]
         if data:
-            # print([task["title"] for unit in units for task in unit["tasks"]])
             for assessment in data:
                 assessmentItem = assessmentTree[assessment["unit"] - 1][
                     assessment["task"] - 1
@@ -124,7 +123,6 @@ class GetPetStreak(views.APIView):
         try:
             calc = request_body["calculate"]
             if calc:
-                print("THE CALCULATION IS BEING DONE")
                 streak.calc_streak()
         except KeyError:
             pass

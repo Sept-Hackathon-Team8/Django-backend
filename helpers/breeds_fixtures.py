@@ -29,7 +29,6 @@ def get_image_and_create_object(breeds, parent=""):
             + "/"
             + RAND_IMG
         )
-        print(img_url)
         response = requests.get(img_url)
         if response.status_code == 200:
             img_url = json.loads(response.text)["message"]
