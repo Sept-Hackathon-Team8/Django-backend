@@ -1,0 +1,722 @@
+[
+    {
+        "model": "units.unit",
+        "pk": "2f453601-48d6-4451-a1f1-308755afdc1a",
+        "fields": {
+            "title": "Unit Three",
+            "order": 3
+        }
+    },
+    {
+        "model": "units.unit",
+        "pk": "60026e37-c108-4346-bae9-c11d95511b6e",
+        "fields": {
+            "title": "Unit Two",
+            "order": 2
+        }
+    },
+    {
+        "model": "units.unit",
+        "pk": "72653094-3a0a-42d6-84e1-894e43faef02",
+        "fields": {
+            "title": "Unit Six",
+            "order": 6
+        }
+    },
+    {
+        "model": "units.unit",
+        "pk": "b24e2ff3-fba7-44e5-9871-592c7b461eb4",
+        "fields": {
+            "title": "Unit One",
+            "order": 1
+        }
+    },
+    {
+        "model": "units.unit",
+        "pk": "f5ed4649-631e-4fe0-8d99-caec5829ec46",
+        "fields": {
+            "title": "Unit Four",
+            "order": 4
+        }
+    },
+    {
+        "model": "units.unit",
+        "pk": "f779290b-e560-4e17-a2d9-c2496fdb1238",
+        "fields": {
+            "title": "Unit Five",
+            "order": 5
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "025ad965-be95-430f-8417-8e07de1377a0",
+        "fields": {
+            "title": "Loose Leash Skills",
+            "instructions": "Ensure your dog is giving Automatic Focus.\r\nTake a step forward.  When your dog moves, mark and reward.\r\nNext, take a step backward.  When your dog moves with you, mark and reward.  Repeat five times.\r\nOnce successful, add three steps before marking and giving the reward.\r\nOnce your dog is following three steps forward and back, “let’s go” can be added when walking forward to get past something and the cue “this way” can help indicate to your dog when to move away or go in the opposite direction of something.",
+            "icon": "https://i.imgur.com/2qbTH8d.png",
+            "image": "https://i.imgur.com/woV7mx3.png",
+            "order": 2,
+            "unit": "60026e37-c108-4346-bae9-c11d95511b6e"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "0e4e824d-d489-4e22-83c1-650b3d30d506",
+        "fields": {
+            "title": "Leash Skills",
+            "instructions": "The leash handle should be over your thumb or over your palm (not wrapped around the wrist).\r\nPick up any excess slack in the leash and hold it with the same hand.\r\nGive your dog enough slack so there is no tension on the leash.",
+            "icon": "https://i.imgur.com/rISi4Lj.png",
+            "image": "https://i.imgur.com/zxCQKV4.png",
+            "order": 1,
+            "unit": "60026e37-c108-4346-bae9-c11d95511b6e"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "1809752b-8fa7-4eaa-98a7-ad9f0456101f",
+        "fields": {
+            "title": "Down",
+            "instructions": "Cue your dog to Sit.\r\nUse a lure. Starting at your dog's nose, lower your hand slowly in a straight line from the nose to the toes.\r\nWait a few seconds and see if your dog lays down. If your dog does not lay down, slowly begin to move your lure along the floor away from your dog. If at any point your dog stands up, go back to step one. If your dog drops into a Down, mark, reward, release.\r\nContinue practicing luring your dog into a Down. Begin to add a few seconds before releasing.",
+            "icon": "https://i.imgur.com/820j5BW.png",
+            "image": "https://svgshare.com/i/atQ.svg",
+            "order": 2,
+            "unit": "f779290b-e560-4e17-a2d9-c2496fdb1238"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "18ab882f-7890-424e-8d96-82635630abf4",
+        "fields": {
+            "title": "Automatic Focus",
+            "instructions": "Put a treat between your index finger and your middle finger. Hold your flat palm toward your dog’s nose so he will touch your hand to eat the treat.\r\nWhen your dog puts his nose to your palm, mark and reward with the treat between your fingers.\r\nRepeat five times with a treat between your fingers.\r\nRepeat the above steps five times, this time varying your hand and body position.",
+            "icon": "https://i.imgur.com/46bX3zE.png",
+            "image": "https://svgur.com/i/aTx.svg",
+            "order": 2,
+            "unit": "b24e2ff3-fba7-44e5-9871-592c7b461eb4"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "1ead2f05-8448-48f2-af9f-5fbbed62e349",
+        "fields": {
+            "title": "Mark and Reward",
+            "instructions": "Sit near your dog. Wait for him to look toward you, while holding a treat behind your back.\r\nWhen he makes eye contact or looks toward your face, mark and reward.\r\nRepeat the activity from a standing position.",
+            "icon": "https://i.imgur.com/r3d9QCk.png",
+            "image": "https://svgur.com/i/aUW.svg",
+            "order": 1,
+            "unit": "b24e2ff3-fba7-44e5-9871-592c7b461eb4"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "32528604-bea4-443c-8325-0fd220d9d4b8",
+        "fields": {
+            "title": "Come When Called with a Long Line",
+            "instructions": "Attach the long line prior to removing the leash.\r\nHave a helper hold your dog on the long line approximately 10 feet away from you. Then call your dog. Mark and reward when he comes.\r\nOnce you are successful at 10 feet, try adding distance slowly until you can successfully call your dog from 20 feet.",
+            "icon": "https://i.imgur.com/SdVp1Eb.png",
+            "image": "https://svgshare.com/i/auT.svg",
+            "order": 1,
+            "unit": "72653094-3a0a-42d6-84e1-894e43faef02"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "34d80432-a3db-4397-aa7e-66016f9be6c5",
+        "fields": {
+            "title": "Emergency Recall",
+            "instructions": "Hold your dog's leash and clicker in one hand and have several small treats in the other hand.\r\nSay your emergency recall word once, mark, and reward.\r\nWait until your dog is distracted or looks away, then take one step away while using happy sounding noises to him to move toward you.\r\nAs your dog is moving toward you, say your emergency recall word one time and move your hand down in a sweeping motion. When your dog touches your hand, mark, reward, and release.",
+            "icon": "https://i.imgur.com/gTS1jBZ.png",
+            "image": "https://svgshare.com/i/au5.svg",
+            "order": 3,
+            "unit": "f5ed4649-631e-4fe0-8d99-caec5829ec46"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "453375aa-8735-4aa7-aea0-97ad403f7c4d",
+        "fields": {
+            "title": "Come When Called with Sit",
+            "instructions": "Wait for your dog to look away then step to the end of leash and call him saying, \"come\" once. \r\nOnce your dog arrives, cue a Sit, then mark, reward, and release.\r\nRepeat the above steps, except when your dog arrives, do not cue him to Sit. Simply wait and see if he voluntarily offers it. \r\nIf your dog sits, mark, reward, and release. If your dog doesn't Sit, try offering either a visual or verbal cue for the new few repetitions.",
+            "icon": "https://i.imgur.com/6WChTEp.png",
+            "image": "https://svgshare.com/i/auE.svg",
+            "order": 3,
+            "unit": "f779290b-e560-4e17-a2d9-c2496fdb1238"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "454ca06e-3ed9-41b6-acb3-dfb998b66cb4",
+        "fields": {
+            "title": "Take It",
+            "instructions": "Hold the treat in an open palm, mark as your dog takes the treat and say, “take it”.",
+            "icon": "https://i.imgur.com/UqZ1Omn.png",
+            "image": "https://svgshare.com/i/atS.svg",
+            "order": 1,
+            "unit": "2f453601-48d6-4451-a1f1-308755afdc1a"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "5723f6ea-826e-40a8-8a7b-66ced6ebed87",
+        "fields": {
+            "title": "Safe On-Leash Encounters",
+            "instructions": "Use the cue, \"let's go\" and Loose Leash.\r\nWalk at a safe distance past any dogs you encounter.\r\nReward any Automatic Focus and move away if you are unable to get your dog's attention.",
+            "icon": "https://i.imgur.com/fjLapjS.png",
+            "image": "https://svgshare.com/i/auz.svg",
+            "order": 1,
+            "unit": "f5ed4649-631e-4fe0-8d99-caec5829ec46"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "6144f2ff-b069-42e9-a039-a6c68c0f185a",
+        "fields": {
+            "title": "Hand Target",
+            "instructions": "Place a treat between your thumb and index finger with palm facing up. Lift the treat over your dog’s head. As he looks up, his rear end should go down.\r\nWhen rear end touches the floor, mark, reward, and release.\r\nRepeat the steps, except start with a treat in your lure hand and a treat in your opposite hand.\r\nWhen your dog sits, mark and reward from the hand opposite your lure hand, then release.",
+            "icon": "https://i.imgur.com/K1HykPd.png",
+            "image": "https://svgur.com/i/aUx.svg",
+            "order": 3,
+            "unit": "b24e2ff3-fba7-44e5-9871-592c7b461eb4"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "6277eac4-c9f2-4275-80c8-f3f8b2e860b8",
+        "fields": {
+            "title": "Come When Called",
+            "instructions": "Hold your dog's leash and clicker in one hand and have several small treats in the other hand. \r\nWait until your dog gets distracted or looks away, take one step away and use happy sounding noises to get him/her to move toward you. As your dog is moving toward you, mark, reward, and release.\r\nAs your dog is distracted, move a few feet further away from your dog. Use happy sounding noises (do not use your dogs name or the verbal cue, \"come\"). As your dog comes toward you, mark, reward, pet, then release.",
+            "icon": "https://i.imgur.com/oSTRjmR.png",
+            "image": "https://svgshare.com/i/auJ.svg",
+            "order": 2,
+            "unit": "f5ed4649-631e-4fe0-8d99-caec5829ec46"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "775788f1-4576-466e-a02b-af740d4ac34c",
+        "fields": {
+            "title": "Puppy Push-ups",
+            "instructions": "Cue your dog to Sit.\r\nOnce your dog sits, cue or lure a Down (depending on your dog's level).\r\nOnce your dog id down, mark and reward.\r\nThen cue or lure sit.\r\nWhen your dog sits, mark, reward, and release.\r\nAs your dog is successful, continue to add additional push-ups.",
+            "icon": "https://i.imgur.com/aMnlzJ7.png",
+            "image": "https://svgshare.com/i/auU.svg",
+            "order": 2,
+            "unit": "72653094-3a0a-42d6-84e1-894e43faef02"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "77f4c3a5-b235-4ba8-8827-e13e812a14a3",
+        "fields": {
+            "title": "Drop It",
+            "instructions": "Approach your dog and engage him with a toy.\r\nOnce your dog has the toy in his mouth, offer him a trade with either a treat or another toy.\r\nWhen your dog drops the toy, mark and reward.\r\nWhen your dog is successful at least twice in a row, you can begin adding the verbal cue “drop it.” Use the cue as your dog is spitting out the toy the first few times.",
+            "icon": "https://i.imgur.com/6aOmXiF.png",
+            "image": "https://svgshare.com/i/arb.svg",
+            "order": 3,
+            "unit": "2f453601-48d6-4451-a1f1-308755afdc1a"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "7da755ae-7dcb-4713-b787-1e5a5d94050e",
+        "fields": {
+            "title": "Wait",
+            "instructions": "Take your dog to a closed door.\r\nTouch the door handle and if your dog moves toward the door, remove your hand from the door and say, “this way”, while moving your dog away from the door.\r\nTouch the handle again.  If your dog does not move forward, mark and reward.\r\nNext, open the door one inch.  If your dog moves, close the door and try again.  When your dog does not move forward, mark and reward.\r\nWhen you can open the door without your dog moving forward, use the cue, “let’s go” to guide your dog out of the door.",
+            "icon": "https://i.imgur.com/eO6qZAz.png",
+            "image": "https://svgshare.com/i/auK.svg",
+            "order": 4,
+            "unit": "2f453601-48d6-4451-a1f1-308755afdc1a"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "8b054a5d-02b9-408d-a2ea-eb097628531e",
+        "fields": {
+            "title": "Differentiating Visual and Verbal Cues",
+            "instructions": "Hold your dog's leash and your clicker in the same hand. Use your other hand to cue your dog to Sit. Do not use a verbal cue.\r\nWhen your dog sits, mark, reward, and release.\r\nHold your hands together at chest level, and use the verbal cue, \"sit.\" When your dog sits, mark, reward, and release.\r\nOne your dog is successful with steps 1-3, hold your hands together down at your sides and use the verbal cue, \"sit.\" When your dog sits, mark, reward, and release.\r\nLast, hold your hands behind your back and use the verbal cue, \"sit.\" When your dog sits, mark, reward, and release.",
+            "icon": "https://i.imgur.com/CjnQ9De.png",
+            "image": "https://svgshare.com/i/auo.svg",
+            "order": 1,
+            "unit": "f779290b-e560-4e17-a2d9-c2496fdb1238"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "8bcb4076-c75b-4e3f-b9a0-9c27362dd5cb",
+        "fields": {
+            "title": "Sit",
+            "instructions": "Before you say “Sit”, Your dog needs to master the action first. If you say the word before your dog understands the action, he’ll become immune to the word.  \r\nSay “Sit” while raising your hand slightly above and over your dog’s head. \r\nMark and reward the behavior.\r\nRelease the behavior with a command word.\r\nAsk your dog to “Sit” as many times as possible throughout the day.",
+            "icon": "https://i.imgur.com/eq2XCel.png",
+            "image": "https://svgur.com/i/aU8.svg",
+            "order": 4,
+            "unit": "b24e2ff3-fba7-44e5-9871-592c7b461eb4"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "a946d13f-9245-4f2a-8bef-bcac077c1650",
+        "fields": {
+            "title": "Leave It",
+            "instructions": "Have the clicker and reward treat in one hand and the Leave It treat in the opposite hand.\r\nApproach and offer the Leave it treat in a closed hand.  Your dog may lick or otherwise interact with the closed hand at this point.\r\nWait until your dog stops focusing on the hand, then mark and reward from the other hand.\r\nOnce your dog is progressing, alternate the hand the Leave It and Take It treats are in and repeat.\r\nRepeat the steps above, this time placing a treat on the floor, covering it with your hand or foot and say, “leave it.”",
+            "icon": "https://i.imgur.com/saj5eU2.png",
+            "image": "https://svgshare.com/i/avH.svg",
+            "order": 2,
+            "unit": "2f453601-48d6-4451-a1f1-308755afdc1a"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "af2b24c7-4218-4819-a86e-50ab915e0ebf",
+        "fields": {
+            "title": "Pet/Don't Pet",
+            "instructions": "Have a family member or friend assist with practicing this skill by approaching you and your dog.\r\nUse your verbal cue for Sit.\r\nHave the family member slowly approach your dog to pet.\r\nObserve whether your dog moves forward to initiate contact.  If not, have the family member walk away. \r\nYour dog is asking for space.\r\nIf your dog moves toward contact, proceed to pet on the shoulder or side of the body for three seconds.",
+            "icon": "https://i.imgur.com/QRJOrD8.png",
+            "image": "https://i.imgur.com/aKG2KmQ.png",
+            "order": 3,
+            "unit": "60026e37-c108-4346-bae9-c11d95511b6e"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "cabf60cf-5223-47b6-bec6-afbad30e3d9c",
+        "fields": {
+            "title": "Sit with Shake",
+            "instructions": "Cue your dog to Sit. One hand has treats, and the other hand has the clicker.\r\nPlace treats in closed hand at your dog's mouth.\r\nMany dogs will automatically lift a front paw to try to \"paw\" at your fist. If this occurs, mark and reward.\r\nFade the lure. You will begin with treats and the clicker in one hand and treats in the other, and again start with your closed fists at the dog's mouth.\r\nOnce your dog paws your fist, mark and feed the treats in your other hand, keeping the treats in your fist.\r\nFrom here you will start to slowly change your closed fist to an open palm.",
+            "icon": "https://i.imgur.com/8GJbYJG.png",
+            "image": "https://svgshare.com/i/avB.svg",
+            "order": 4,
+            "unit": "f779290b-e560-4e17-a2d9-c2496fdb1238"
+        }
+    },
+    {
+        "model": "units.task",
+        "pk": "eb821f99-df3e-402f-844e-e858e47e3bb7",
+        "fields": {
+            "title": "Handling/Desensitizing",
+            "instructions": "Begin by gently petting your dog.\r\nIf your dog is comfortable, briefly and gently touch the ears and pair with a treat.  Continue petting to comfort your dog.\r\nTouch the sides of his face, pair with a treat, and continue petting.\r\nTouch the tail, pair with a treat, and continue petting.\r\nTouch the feet, pair with a treat, and continue petting.\r\nTouch the stomach, pair with a treat, and continue petting.\r\nGently touch your dog’s collar, pair with a treat, and continue petting.",
+            "icon": "https://i.imgur.com/SYuX3k0.png",
+            "image": "https://i.imgur.com/JK7vUbh.png",
+            "order": 4,
+            "unit": "60026e37-c108-4346-bae9-c11d95511b6e"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 1,
+        "fields": {
+            "success": false,
+            "title": "Timing",
+            "text": "If you take too long to deliver the treat, your dog can become confused about what exactly he’s being rewarded for.\r\nUsing a “marker” — like a whistle or a clicker — when you train can give you incredible precision with your timing.",
+            "task": "6144f2ff-b069-42e9-a039-a6c68c0f185a"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 2,
+        "fields": {
+            "success": false,
+            "title": "Add Distance and Increase Value",
+            "text": "If your dog doesn’t sit when asked because they are too distracted, simply add distance between you and the distraction before trying again.\r\nYour other option is to increase the value of the treat reward or consider using toys and play as a reward.",
+            "task": "8bcb4076-c75b-4e3f-b9a0-9c27362dd5cb"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 3,
+        "fields": {
+            "success": false,
+            "title": "Rate of Reinforcement",
+            "text": "A place can provide rewards like smells, other dogs, or another person.\r\nThat means the rewards you offer are in competition with the place.\r\n Until your dog works around distractions, your rate of reinforcement should be frequent  to keep you and the training session exciting.\r\n If not, the wrong behavior can be reinforced.",
+            "task": "1ead2f05-8448-48f2-af9f-5fbbed62e349"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 4,
+        "fields": {
+            "success": false,
+            "title": "Rewards From A Dog’s Point  of View",
+            "text": "Make sure you choose something truly rewarding from your dog’s point of view. Rewards can even be praise, a toy, or a chance to play a game — anything your dog loves makes a great reinforcement.\r\nIf your dog dislikes something, it will decrease his desire to repeat a behavior.",
+            "task": "18ab882f-7890-424e-8d96-82635630abf4"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 5,
+        "fields": {
+            "success": true,
+            "title": "Success 1.0",
+            "text": "What a good doggo! Here's a treat for him!",
+            "task": "1ead2f05-8448-48f2-af9f-5fbbed62e349"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 6,
+        "fields": {
+            "success": true,
+            "title": "Success 2.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "18ab882f-7890-424e-8d96-82635630abf4"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 7,
+        "fields": {
+            "success": true,
+            "title": "Success 3.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "6144f2ff-b069-42e9-a039-a6c68c0f185a"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 8,
+        "fields": {
+            "success": true,
+            "title": "Success 4.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "8bcb4076-c75b-4e3f-b9a0-9c27362dd5cb"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 9,
+        "fields": {
+            "success": true,
+            "title": "Success 1.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "0e4e824d-d489-4e22-83c1-650b3d30d506"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 10,
+        "fields": {
+            "success": false,
+            "title": "Leash-Training Troubleshooting",
+            "text": "If your dog starts pulling in the other direction, turn yourself into “a tree.” \r\nStand very still and refuse to move until your dog comes back to you. \r\nDo not yank or jerk the leash, and do not drag your dog along with you. \r\nFront-hook harnesses and head halters are alternative training tools designed for dogs that tend to pull.",
+            "task": "0e4e824d-d489-4e22-83c1-650b3d30d506"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 11,
+        "fields": {
+            "success": true,
+            "title": "Success 2.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "025ad965-be95-430f-8417-8e07de1377a0"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 12,
+        "fields": {
+            "success": false,
+            "title": "Leash-Training Troubleshooting",
+            "text": "If your pup barks: Some dogs have the habit of barking at other dogs while on a walk. \r\nOftentimes, this behavior comes as a result of lack of exercise. \r\nMake sure your dog gets the proper amount of mental and physical stimulation for his age and breed. \r\nIf this is still a problem, use the same process as you would if your dog is lunging, as described above — create distance and offer treats before he starts to bark, so every time he sees a dog he gets used to turning his attention to you.",
+            "task": "025ad965-be95-430f-8417-8e07de1377a0"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 13,
+        "fields": {
+            "success": true,
+            "title": "Success 3.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "af2b24c7-4218-4819-a86e-50ab915e0ebf"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 14,
+        "fields": {
+            "success": false,
+            "title": "Pause",
+            "text": "After three seconds of petting—take your hand away.\r\nIf your dog stays close or leans in, pet more.\r\nIf your dog moves away or looks uncomfortable, stop.\r\nIf you really pay attention to what your dog wants, you’ll learn how to be a more attentive human who can actually make your dog happy.",
+            "task": "af2b24c7-4218-4819-a86e-50ab915e0ebf"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 15,
+        "fields": {
+            "success": true,
+            "title": "Success 4.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "eb821f99-df3e-402f-844e-e858e47e3bb7"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 16,
+        "fields": {
+            "success": false,
+            "title": "Give your dog a reward when exposing them to their trigger",
+            "text": "For instance, if your dog is triggered by young children, sit with your dog while a young child is in view. \r\nWhen your dog is calm, either before it can start panicking or after the panicking ends, give it a small, yummy snack. \r\nIt's crucial to only give the dog a treat when they're calm; rewarding them while they're still fearful can train the dog to be scared.",
+            "task": "eb821f99-df3e-402f-844e-e858e47e3bb7"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 17,
+        "fields": {
+            "success": true,
+            "title": "Success 1.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "454ca06e-3ed9-41b6-acb3-dfb998b66cb4"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 18,
+        "fields": {
+            "success": false,
+            "title": "Train with high-value treats.",
+            "text": "You will be amazed at how much harder your dog will work for a tiny piece of chicken breast, cheese, or liver, compared to even premium store-bought treats. \r\nThose may work in distraction-free settings, but when the job gets more difficult, you need to bring out the good stuff. \r\nTraining treats should be soft, so you don’t have to wait for Rover to chew before continuing the lesson.",
+            "task": "454ca06e-3ed9-41b6-acb3-dfb998b66cb4"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 19,
+        "fields": {
+            "success": true,
+            "title": "Success 2.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "a946d13f-9245-4f2a-8bef-bcac077c1650"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 20,
+        "fields": {
+            "success": false,
+            "title": "Hide a Treat Under Your Shoe",
+            "text": "Start with a tasty treat under the toe of your shoe (make sure your dog can’t snatch it).\r\nLet your dog sniff, lick and paw the toe of your shoe. Patiently wait until they get bored and give up.\r\nThe moment they turn away from your shoe, mark it with a word (“YES”) or clicker and reward your dog with a treat from your open palm—never the treat you’ve just asked them to leave alone. Repeat 5 times.\r\nNext, add your cue. Make eye contact and say “Leave it!” firmly when your dog first notices the treat under your toe.\r\nReward them with a tasty treat from your hand when they turn away. Repeat 5 times.",
+            "task": "a946d13f-9245-4f2a-8bef-bcac077c1650"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 21,
+        "fields": {
+            "success": true,
+            "title": "Success 3.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "77f4c3a5-b235-4ba8-8827-e13e812a14a3"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 22,
+        "fields": {
+            "success": false,
+            "title": "Tug of War",
+            "text": "Simply present the toy and start playing. \r\nAfter a few seconds, go still. \r\nYour dog will eventually get bored of playing alone and will drop the toy. \r\nWhen they do, praise them then reward them with another game of tug. \r\nOnce your dog is dropping the toy as soon as you go still, you’re ready to add the verbal cue. \r\nYou can do the same type of training with a flirt pole (a toy tied to a string on the end of a pole).",
+            "task": "77f4c3a5-b235-4ba8-8827-e13e812a14a3"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 23,
+        "fields": {
+            "success": true,
+            "title": "Success 4.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "7da755ae-7dcb-4713-b787-1e5a5d94050e"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 24,
+        "fields": {
+            "success": false,
+            "title": "Wait, It’s a Game!",
+            "text": "With your dog on leash, run with her a few steps, then say “Wait!” and stop moving. \r\nWhen your dog stops, pause several seconds, then say “Let’s go!” and take off running again. \r\nEncourage your doggo to get excited! \r\nThen say “Wait!” and stop again.\r\n Vary the amount of time you pause so she never knows when the “Let’s go!” is coming. \r\nWhen really good at stopping at your “Wait!” try it off leash running next to your doggo (in a fenced area at first, if needed), and eventually with farther and farther away from you.",
+            "task": "7da755ae-7dcb-4713-b787-1e5a5d94050e"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 25,
+        "fields": {
+            "success": true,
+            "title": "Success 1.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "32528604-bea4-443c-8325-0fd220d9d4b8"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 26,
+        "fields": {
+            "success": false,
+            "title": "What To Do When Your Dog Doesn't Come",
+            "text": "First of all, watch your tone. \r\nMake sure you avoid an angry tone when giving the cue word and try again with a happy one.\r\nIf you’ve used the cue “come” over and over again with absolutely no success, consider going back to the drawing board by picking a new cue word and starting the training process over again.\r\nIt’s possible that “come” has lost meaning to your dog and they will grasp the behavior better with a new word like “here.”",
+            "task": "32528604-bea4-443c-8325-0fd220d9d4b8"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 27,
+        "fields": {
+            "success": true,
+            "title": "Success 2.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "775788f1-4576-466e-a02b-af740d4ac34c"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 28,
+        "fields": {
+            "success": false,
+            "title": "The Leash is a Lure!",
+            "text": "Do not pull him up into a sit using the leash nor yank him down to the ground. \r\nInstead use the treat as a lure to help him move to the correct position. \r\nIn fact, even if your dog knows sit and down, using the lure can help make this more exciting, more fun, and will encourage him to change positions more quickly.",
+            "task": "775788f1-4576-466e-a02b-af740d4ac34c"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 29,
+        "fields": {
+            "success": true,
+            "title": "Success 1.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "8b054a5d-02b9-408d-a2ea-eb097628531e"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 30,
+        "fields": {
+            "success": true,
+            "title": "Success 2.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "1809752b-8fa7-4eaa-98a7-ad9f0456101f"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 31,
+        "fields": {
+            "success": true,
+            "title": "Success 3.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "453375aa-8735-4aa7-aea0-97ad403f7c4d"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 32,
+        "fields": {
+            "success": true,
+            "title": "Success 4.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "cabf60cf-5223-47b6-bec6-afbad30e3d9c"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 33,
+        "fields": {
+            "success": true,
+            "title": "Success 1.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "5723f6ea-826e-40a8-8a7b-66ced6ebed87"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 34,
+        "fields": {
+            "success": true,
+            "title": "Success 2.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "6277eac4-c9f2-4275-80c8-f3f8b2e860b8"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 35,
+        "fields": {
+            "success": true,
+            "title": "Success 3.0",
+            "text": "What a good doggo! Here's a treat!",
+            "task": "34d80432-a3db-4397-aa7e-66016f9be6c5"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 36,
+        "fields": {
+            "success": false,
+            "title": "Engage All Three Senses",
+            "text": "If you really want to stack the deck in your dog’s favor, consider combining cues. \r\nUse a verbal cue with a hand signal, and to get your dog’s sense of smell in there, too, use delicious, stinky treats. Three of your dog’s senses will be at play, and you will have done all you can to ensure that he is focused on you. \r\nMost importantly, the next time you’re wondering why your dog isn’t doing as you’ve asked, rather than yelling for his attention, repeating the command several times, or trying to say it in a different way, consider what he’s looking at instead of potentially confusing him with what he’s listening to.",
+            "task": "8b054a5d-02b9-408d-a2ea-eb097628531e"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 37,
+        "fields": {
+            "success": false,
+            "title": "\"Down\" Can Be Taught Like \"Sit\"",
+            "text": "You can wait for your dog to lie down (beginning in a boring, small room such as a bathroom can help)\r\nCapture the behavior by reinforcing your dog with a treat when he lies down\r\nGive him his release cue to stand back up (and encouragement with a lure if needed) and then waiting for him to lie down again.\r\nWhen he is quickly lying down after standing up, you can begin saying “down” right before he does so.",
+            "task": "1809752b-8fa7-4eaa-98a7-ad9f0456101f"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 38,
+        "fields": {
+            "success": false,
+            "title": "Reward Eye Contact",
+            "text": "When you notice your dog is looking at you or has self-selected to be close to you, verbally praise and treat. \r\nYou may use a lot of treats at first, but you are reinforcing an important lesson to your dog. Being near you and paying attention to you makes good things happen.",
+            "task": "453375aa-8735-4aa7-aea0-97ad403f7c4d"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 39,
+        "fields": {
+            "success": false,
+            "title": "Just Say Yes",
+            "text": "Once your dog realizes you have a treat in your closed hand, they will try to get it from you. \r\nWhen they make a move toward the behavior you want — such as lifting a paw to try and get the treat from your fist — say \"Yes!\" with a lot of enthusiasm and excitement and give them the treat.",
+            "task": "cabf60cf-5223-47b6-bec6-afbad30e3d9c"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 40,
+        "fields": {
+            "success": false,
+            "title": "Give Space",
+            "text": "When encountering another dog on a walk, leaving at least a leash distance (~6ft) of space will keep frustration down for excitable dogs and stress down for anxious dogs.\r\nIf either dog is dog-aggressive or reactive, this space will give the owner time to say “Please give us space, my pup is not friendly!” and both can safely go on their ways.",
+            "task": "5723f6ea-826e-40a8-8a7b-66ced6ebed87"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 41,
+        "fields": {
+            "success": false,
+            "title": "Don’t Repeat Yourself.",
+            "text": "If you have to repeat your recall cue, the environment may be too distracting. Or, your dog doesn’t understand the skill well enough for the level you are trying to train.",
+            "task": "6277eac4-c9f2-4275-80c8-f3f8b2e860b8"
+        }
+    },
+    {
+        "model": "units.tip",
+        "pk": 42,
+        "fields": {
+            "success": false,
+            "title": "Never Chase!",
+            "text": "If you require recall in an emergency like if a gate was left open, don’t chase your dog. That’s likely to make them continue the “game” you don’t want to play by moving away from you. Instead, try running away from your dog to inspire them to chase after you.",
+            "task": "34d80432-a3db-4397-aa7e-66016f9be6c5"
+        }
+    }
+]
